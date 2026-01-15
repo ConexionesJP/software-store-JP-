@@ -3,67 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConexionesJP | Software</title>
+    <title>ConexionesJP | Official Store</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             margin: 0; padding: 0;
-            background: linear-gradient(-45deg, #050505, #1a0b2e, #020205, #001f3f);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            background: radial-gradient(circle at center, #0a0a1a 0%, #050505 100%);
             color: white; font-family: 'Segoe UI', sans-serif;
-            text-align: center; overflow-x: hidden;
+            text-align: center;
         }
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        header { padding: 50px 20px; }
+        .logo-main {
+            width: 400px; max-width: 80%;
+            filter: drop-shadow(0 0 15px #00d2ff);
+            margin-bottom: 20px;
         }
-        header { padding: 40px 20px; }
-        .logo-jp {
-            width: 500px; /* Tamaño grande */
-            max-width: 90%;
-            filter: drop-shadow(0 0 20px #00d2ff);
-            animation: pulse 4s ease-in-out infinite;
+        .container {
+            display: flex; flex-wrap: wrap;
+            justify-content: center; gap: 25px;
+            padding: 40px;
         }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); filter: drop-shadow(0 0 40px #bc13fe); }
-        }
-        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
         .card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 210, 255, 0.3);
-            border-radius: 20px; width: 300px; padding: 30px; transition: 0.3s;
+            border: 1px solid rgba(0, 210, 255, 0.2);
+            border-radius: 20px; width: 280px;
+            padding: 30px; transition: 0.4s;
+            position: relative; overflow: hidden;
         }
-        .card:hover { transform: translateY(-10px); border-color: #bc13fe; box-shadow: 0 0 30px rgba(188, 19, 254, 0.4); }
-        .price { font-size: 2em; color: #00d2ff; font-weight: bold; display: block; margin: 15px 0; }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #bc13fe;
+            box-shadow: 0 0 30px rgba(188, 19, 254, 0.3);
+        }
+        /* Etiqueta de MARCA JP */
+        .brand-badge {
+            background: #bc13fe; color: white;
+            font-size: 10px; font-weight: bold;
+            padding: 5px 20px; position: absolute;
+            top: 15px; right: -20px;
+            transform: rotate(45deg);
+        }
+        .icon { font-size: 45px; color: #00d2ff; margin-bottom: 15px; }
+        .price { font-size: 1.8em; color: #00d2ff; font-weight: bold; display: block; margin: 15px 0; }
         .btn-ws {
-            text-decoration: none; color: white; border: 2px solid #bc13fe;
-            padding: 10px 20px; border-radius: 8px; font-weight: bold; display: inline-block;
+            text-decoration: none; color: white;
+            border: 2px solid #bc13fe; padding: 10px 25px;
+            border-radius: 50px; font-weight: bold;
+            display: inline-block; transition: 0.3s;
         }
         .btn-ws:hover { background: #bc13fe; box-shadow: 0 0 20px #bc13fe; }
     </style>
 </head>
 <body>
+
     <header>
-        <img src="logo.png" class="logo-jp" alt="ConexionesJP">
-        <h2 style="letter-spacing: 5px; font-weight: 200;">TECNOLOGÍA Y DESARROLLO</h2>
+        <img src="logo.png" class="logo-main" alt="ConexionesJP">
+        <h1 style="letter-spacing: 5px; font-weight: 300;">CONEXIONES JP STORE</h1>
     </header>
+
     <div class="container">
+        
         <div class="card">
-            <h3>TELECOM MANAGER</h3>
-            <p>Gestión de servicios hogar y activos.</p>
-            <span class="price">$150.000</span>
-            <a href="https://wa.me/573000000000" class="btn-ws">ADQUIRIR</a>
+            <div class="brand-badge">PROPIO</div>
+            <div class="icon"><i class="fas fa-rocket"></i></div>
+            <h3>JP SYSTEM PRO</h3>
+            <p>Software de exhibición y gestión con el sello oficial de Conexiones JP.</p>
+            <span class="price">EXHIBICIÓN</span>
+            <a href="https://wa.me/573000000000" class="btn-ws">SOLICITAR</a>
         </div>
+
         <div class="card">
-            <h3>SOFTWARE A MEDIDA</h3>
-            <p>Soluciones personalizadas para tu empresa.</p>
+            <div class="icon"><i class="fas fa-network-wired"></i></div>
+            <h3>TELECOM MANAGER</h3>
+            <p>Gestión avanzada para servicios de hogar, activos y telecomunicaciones.</p>
+            <span class="price">$150.000</span>
+            <a href="https://wa.me/573000000000" class="btn-ws">COMPRAR</a>
+        </div>
+
+        <div class="card">
+            <div class="icon"><i class="fas fa-code"></i></div>
+            <h3>DESARROLLO JP</h3>
+            <p>Creamos el software que tu negocio necesita desde cero.</p>
             <span class="price">COTIZAR</span>
             <a href="https://wa.me/573000000000" class="btn-ws">INFO</a>
         </div>
+
     </div>
+
+    <footer style="margin-top: 50px; padding-bottom: 50px; opacity: 0.6;">
+        <p>&copy; 2024 Conexiones JP - Tecnología que conecta soluciones</p>
+    </footer>
+
 </body>
 </html>
